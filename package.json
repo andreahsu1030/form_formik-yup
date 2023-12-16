@@ -2,7 +2,7 @@
   "name": "form_formik-yup",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://andreahsu1030.github.io/form_formik-yup",
+  "homepage": "https://andreahsu1030.github.io/form_formik-yup/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
