@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import BasicForm from './components/BasicForm'
+import AdvanceForm from './components/AdvanceForm'
+import "./App.css"
 
 function App() {
+  const [view, setView] = useState('basic')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+    <div className='App'>
+      <nav>
+        <h3
+          onClick={() => setView('basic')}
+          style={{ color: view === 'basic' ? '#fff' : '' }}>
+          Basic
+        </h3>
+        <h3
+          onClick={() => setView('advance')}
+          style={{ color: view === 'advance' ? '#fff' : '' }}
         >
-          Learn React
-        </a>
-      </header>
+          Advance
+        </h3>
+      </nav>
+      {view === 'basic' ? <BasicForm /> : <AdvanceForm />}
     </div>
   );
 }
